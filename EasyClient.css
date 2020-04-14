@@ -1,0 +1,3166 @@
+﻿	/* default */
+	html { width: 100%; min-width: 320px; height: 100%;  font-family: 'Arial', 'Noto Sans KR', sans-serif; font-size:9pt; color:#666 }
+	body { width: 100%; height: 100%; /* background-color: #fcfdfe; */ }
+	
+	@charset "utf-8";
+	html, body {margin:0; padding:0;}
+	form, input, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd {margin:0; padding:0;}
+	ul, ol, li {list-style:none;}
+	img	{border:0; vertical-align:top}
+	/* table {border-collapse:collapse; border-spacing:0 !important;} */
+	th, td {padding:0;}
+	th {font-weight: normal}
+	textarea {padding:0; margin:0; resize: none; line-height:120% !important;}
+	fieldset {display:block; border:none; padding:0; margin:0}
+	legend, caption	{width:0; height:0; padding:0; margin:0; font-size:0; line-height:0;}
+	a, a:hover {text-decoration: none; color: #666}
+	/* default */
+
+
+
+	/* Controls */
+	
+	/* Label */
+	.Label {
+		display: inline;
+		overflow: hidden;
+		box-sizing: border-box;
+		padding: 0px;
+		/* margin-right: 10px; */
+	}
+	.Label table {
+		width: 100%;
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+		border: 0px none;
+		border-spacing: 0px;
+	}
+	.Label table td {
+		white-space: pre;
+	}
+	.Label table td img {
+		/* width: auto; */
+		/* height: 100%; */
+		padding-right: 5px;
+		vertical-align: top;
+		box-sizing: border-box;
+		border: 0px none;
+	}
+	/* .Label span {white-space:pre;} */
+	/* Label */
+	
+	/* TextBox */
+	.TextBox {
+		/* overflow-y: auto; */
+		padding-left: 5px;
+		padding-right: 5px;
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3;
+		border-radius: 4px;
+		height: 30px;
+		line-height: 30px;
+		font-family: inherit; 
+		font-size: inherit; 
+		color: inherit;
+		background-color: #ffffff;
+	}
+	.TextBox-disabled {
+		/* overflow-y: auto; */
+		padding-left: 5px;
+		padding-right: 5px;
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3;
+		border-radius: 4px;
+		height: 30px;
+		line-height: 30px;
+		font-family: inherit; 
+		font-size: inherit; 
+		color: inherit;
+		background-color: #eff2f4 !important;
+		cursor: not-allowed;
+	}	
+	.TextBox:hover {
+		border: 1px solid #228cd1;
+		outline: #228cd1;
+	}
+	.TextBox:focus {
+		border: 1px solid #228cd1;
+		outline: #228cd1;
+	}
+	textarea.TextBox {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	::placeholder {
+		color: #a9a9a9;
+		opacity: 1; /* Firefox */
+	}
+	:-ms-input-placeholder { /* Internet Explorer 10-11 */
+		color: #a9a9a9;
+	}
+	::-ms-input-placeholder { /* Microsoft Edge */\
+		color: #a9a9a9;
+	}
+	/* TextBox */
+	
+	/* ComboBox */
+	.ComboBox { 
+		line-height: 28px; 
+		height: 28px; 
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3; 
+		border-radius: 4px;
+		font-family: inherit; 
+		font-size: inherit; 
+		color: inherit;
+	}
+	.ComboBox-disabled { 
+		line-height: 28px; 
+		height: 28px; 
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3; 
+		border-radius: 4px;
+		font-family: inherit; 
+		font-size: inherit; 
+		color: inherit;
+		background-color: #eff2f4 !important;
+		cursor: not-allowed;
+	}
+	.ComboBox:hover {
+		border: 1px solid #228cd1;
+		outline: #228cd1;
+	}
+	.ComboBox:focus {
+		border: 1px solid #228cd1;
+		outline: #228cd1;
+	}
+	/* ComboBox */
+	
+	/* ComboBox(Editable) */
+	.lstDataPanel {
+		borderCollapse: collapse; border: 1px solid #000000; 
+		overflow-x: expression((this.childNodes(0).offsetWidth>parseInt(this.style.width))?'scroll':'visible');
+		overflow-y: expression((this.childNodes(0).offsetHeight>parseInt(this.style.height))?'scroll':'visible');
+	}
+	.lstSelectedStyle { 
+		color: white; 
+		text-decoration: blink; 
+		background-color: #000080; 
+		cursor: pointer;
+	}
+	.lstMoveStyle { 
+		color: black; 
+		text-decoration: blink; 
+		background-color: #fafad2; 
+		cursor: pointer;
+	}
+	.lstNotSelectStyle { 
+		color: #000000; 
+		background-color: #ffffff; 
+		cursor: pointer;
+	}
+	input.comboEdit:focus { outline:0; }
+	div.dropdownlist { border: solid 1px #000; background-color: #fff; overflow: auto; }
+	div.dropdownlist a{ display: block; text-decoration: none; color: #000; padding: 1px; cursor: default; font-size:1em; }
+	div.dropdownlist a.blueback { color: #fff; background-color: #007; }
+	div.dropdownlist a:hover { color: #000000; background-color: #C0C0C0; }
+	/* ComboBox(Editable) */
+	
+	/* CheckBox */
+	/*.CheckBox { cursor:pointer; }
+	input[type="checkbox"] { vertical-align: middle; margin-top:-2px; cursor: pointer;} */
+	/* The container classic */
+	.CheckBox-classic {
+		cursor:pointer;
+	}
+	
+	.CheckBox-classic input {
+		vertical-align: middle;
+		margin-top:-2px;
+		cursor:pointer;
+	}
+	
+	/* The container */
+	.CheckBox { 
+		cursor:pointer; 
+		padding-left: 19px; 
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	
+	/* Hide the browser's default checkbox */
+	.CheckBox input,
+	.CheckBox-disabled input { 
+		position: absolute;
+		opacity: 0; 
+		cursor: pointer; 
+		height: 0; 
+		width: 0; 
+	}
+	
+	/* Create a custom checkbox */
+	.CheckBox .checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 17px;
+		width: 17px;
+		background-color: #eff0f4;
+		border: 1px solid #c3c3c3;
+		outline: #c3c3c3;
+		box-sizing: border-box;
+	}
+	
+	/* On mouse-over, add a grey background color */
+	.CheckBox:hover input ~ .checkmark,
+	.CheckBox-disabled:hover input ~ .checkmark {
+		border: 1px solid rgb(79, 168, 227);
+		outline: rgb(79, 168, 227);
+	}
+		
+	/* When the checkbox is checked, add a blue background */
+	.CheckBox input:checked ~ .checkmark,
+	.CheckBox-disabled input:checked ~ .checkmark {
+		background-color: rgb(79, 168, 227);
+		border: 1px solid rgb(79, 168, 227);
+		outline: rgb(79, 168, 227);
+	}
+	
+	/* Create the checkmark/indicator (hidden when not checked) */
+	.CheckBox .checkmark:after,
+	.CheckBox-disabled .checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+	
+	/* Show the checkmark when checked */
+	.CheckBox input:checked ~ .checkmark:after,
+	.CheckBox-disabled input:checked ~ .checkmark:after {
+		display: block;
+	}
+	
+	/* Style the checkmark/indicator */
+	.CheckBox .checkmark:after,
+	.CheckBox-disabled .checkmark:after {
+		left: 4px;
+		top: -1px;
+		width: 5px;
+		height: 10px;
+		border: solid white;
+		border-width: 0 3px 3px 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+	
+	.CheckBox-disabled { 
+		cursor:not-allowed; 
+		padding-left: 19px; 
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.CheckBox-disabled .checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 17px;
+		width: 17px;
+		background-color: #eff0f4;
+		border: 1px solid #c3c3c3;
+		outline: #c3c3c3;
+		box-sizing: border-box;
+		filter:alpha(opacity=50); 
+		opacity:0.5;
+	}
+	/* CheckBox */
+	
+	/* OptionButton */
+	/* .OptionButton { cursor:pointer; padding:0px; line-height: normal; }
+	input[type="radio"] { vertical-align: middle; margin-top:-2px; cursor: pointer;} */
+	/* The container classic */
+	.OptionButton-classic { 
+		cursor:pointer; 
+	}
+	
+	.OptionButton-classic input {
+		vertical-align: middle; 
+		margin-top:-2px; 
+		cursor: pointer;
+	}
+	
+	/* The container */
+	.OptionButton { 
+		cursor:pointer; 
+		padding:0px; 
+		padding-left: 19px;
+		line-height: normal; 
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	
+	/* Hide the browser's default radio button */
+	.OptionButton input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		width: 0;
+		height: 0;
+	}
+	
+	/* Create a custom radio button */
+	.OptionButton .checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 17px;
+		width: 17px;
+		background-color: #eff0f4;
+		border-radius: 50%;
+		border: 1px solid #c3c3c3;
+		outline: #c3c3c3;
+		box-sizing: border-box;
+	}
+	
+	/* On mouse-over, add a grey background color */
+	.OptionButton:hover input ~ .checkmark {
+		border: 1px solid rgb(79, 168, 227);
+		outline: rgb(79, 168, 227);
+	}
+	
+	/* When the radio button is checked, add a blue background */
+	.OptionButton input:checked ~ .checkmark {
+		background-color: rgb(79, 168, 227);
+		border: 1px solid rgb(79, 168, 227);
+		outline: rgb(79, 168, 227);
+	}
+	
+	/* Create the indicator (the dot/circle - hidden when not checked) */
+	.OptionButton .checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+	
+	/* Show the indicator (dot/circle) when checked */
+	.OptionButton input:checked ~ .checkmark:after {
+		display: block;
+	}
+	
+	/* Style the indicator (dot/circle) */
+	.OptionButton .checkmark:after {
+	 	top: 4px;
+		left: 4px;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background: white;
+	}
+	
+	/* The container */
+	.OptionButton-disabled { 
+		cursor:not-allowed; 
+		padding:0px; 
+		padding-left: 19px;
+		line-height: normal; 
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	
+	/* Hide the browser's default radio button */
+	.OptionButton-disabled input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		width: 0;
+		height: 0;
+	}
+	
+	/* Create a custom radio button */
+	.OptionButton-disabled .checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 17px;
+		width: 17px;
+		background-color: #eff0f4;
+		border-radius: 50%;
+		border: 1px solid #c3c3c3;
+		outline: #c3c3c3;
+		box-sizing: border-box;
+		background-color: transparent !important;
+		filter:alpha(opacity=50); 
+		opacity:0.5;
+	}
+	/* OptionButton */
+	
+	/* BUTTON */
+	/*
+	.CommandButton { display:inline-block; padding:0px; line-height:22px; height:22px; cursor:pointer; overflow:hidden; white-space:nowrap; background-color:#eff2f4 !important; color:#6b8595 !important; border-radius:4px !important; border:1px solid #abbac3; transition:background-color 0.15s, border-color 0.15s, opacity 0.15s; vertical-align:middle; text-align:center; touch-action: manipulation; -webkit-user-select:none; -webkit-appearance:button; text-transform:none; box-sizing:border-box; text-rendering:auto; -webkit-writing-mode:horizontal-tb; font-size:13px; }
+	.CommandButton img { display:block; position:absolute; vertical-align:middle; }
+	.CommandButton :hover { border-color: #abbac3; color: #000000 !important; }
+	*/
+	.CommandButton {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		border: 1px solid #228cd1;
+		border-radius: 4px;
+		border-image: none;
+		transition: background-color 0.15s, border-color 0.15s, opacity 0.15s;
+		background-color: rgb(255, 255, 255);
+		text-align: center;
+		text-transform: none;
+		text-rendering: auto;
+		white-space: nowrap;
+		overflow: hidden;
+		color: #228cd1;
+		font-family: fontello;
+		font-weight: bold;
+		touch-action: manipulation;
+		cursor: pointer;
+		outline: none;
+	}
+	.CommandButton:hover {
+		background-color: #228cd1;
+		color: #fff;
+	}
+	.CommandButton:focus {
+		box-shadow: 0px 0px 0px 1px rgba(58, 157, 223, 0.5);
+	}
+	.CommandButton:active {
+		background: #2187cb;
+		box-shadow: none;
+		border-color: rgba(0, 0, 0, 0);
+		color: rgb(255, 255, 255);
+	}
+	.CommandButton > div {
+		margin: 0px;
+		padding: 0px;
+		display: table;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		vertical-align: middle;
+		transition:0.5s;
+	}
+	.CommandButton > div > div {
+		margin: 0px;
+		padding: 0px;
+		display: table-cell;
+		box-sizing: border-box;
+		vertical-align: middle;
+	}
+	.CommandButton span {
+		position: relative;
+	}
+	.CommandButton span[class^='icon-']::before {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.CommandButton span[class*=' icon-']::before {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.CommandButton-disabled {
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+		border: 1px solid rgb(135, 168, 208, 0.5);
+		border-radius: 4px;
+		background-color: #fff !important;
+		white-space: nowrap;
+		text-align: center;
+		color: rgb(135, 168, 208, 0.5);
+		font-weight: bold;
+		overflow: hidden;
+		touch-action: manipulation;
+		transition: background-color 0.15s, border-color 0.15s, opacity 0.15s;
+		text-transform: none;
+		text-rendering: auto;
+		cursor: not-allowed;
+		/* filter:alpha(opacity=60); */ 
+		/* opacity:0.6; */
+	}
+	.CommandButton-disabled:focus {
+		outline: none;
+	}
+	.CommandButton-disabled > div {
+		position: absolute;
+		display: table;
+		width: 100%;
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+		vertical-align: middle;
+		transition: 0.5s;
+	}
+	.CommandButton-disabled > div > div {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+	.CommandButton-image {
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+		text-align: center;
+		overflow: hidden;
+		white-space: nowrap;
+		border: 0;
+		border-radius: 4px;
+		background-color: transparent;
+		/* color: #6b8595; */
+		transition: background-color 0.15s, border-color 0.15s, opacity 0.15s;
+		touch-action: manipulation;
+		text-transform: none;
+		text-rendering: auto;
+		cursor: pointer;
+	}
+	.CommandButton-image > div {
+		position: absolute;
+		display: table;
+		width: 100%;
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+		vertical-align: middle;
+	}
+	.CommandButton-image > div > div {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+	}
+	.CommandButton-image img:hover {
+		box-shadow: 2px 2px 3px #c3c3c3;		
+	}
+	.CommandButton-image:focus {
+		outline: none;
+	}
+	.CommandButton-image img:active {
+		filter:alpha(opacity=50); 
+		opacity:0.5;
+	}
+	.CommandButton-image-disabled {
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+		text-align: center;
+		overflow: hidden;
+		white-space: nowrap;
+		border: 0;
+		border-radius: 4px;
+		background-color: transparent;
+		transition: background-color 0.15s, border-color 0.15s, opacity 0.15s;
+		touch-action: manipulation;
+		text-transform: none;
+		text-rendering: auto;
+		cursor: not-allowed;
+	}
+	.CommandButton-image-disabled:focus {
+		outline: none;
+	}
+	.CommandButton-image-disabled > div {
+		position: absolute;
+		display: table;
+		width: 100%;
+		height: 100%;
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+		vertical-align: middle;
+	}
+	/* BUTTON */
+	
+	/* LISTBOX */
+	.ListBox, .ListBoxA, .ListBoxB, .ListBoxC, .ListBoxD {
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3;
+		overflow-y: auto;
+		overflow-x: hidden;
+		background-color: #fff;
+		border-radius: 4px;
+	}
+	.ListBox > div, .ListBoxA > div, .ListBoxB > div, .ListBoxC > div, .ListBoxD > div {
+		width: 100%;
+		height: 100%;
+	}
+	.ListBox div div, .ListBoxA div div, .ListBoxB div div, .ListBoxC div div, .ListBoxD div div {
+		margin-bottom:1px;
+		cursor: pointer;
+		padding: 2px;
+	}
+	.ListBox:hover, .ListBoxA:hover, .ListBoxB:hover, .ListBoxC:hover, .ListBoxD:hover {
+		/* border: 1px solid #228cd1;
+		outline: #228cd1; */
+		outline: none;
+	}
+	.ListBox:focus, .ListBoxA:focus, .ListBoxB:focus, .ListBoxC:focus, .ListBoxD:focus {
+		/* border: 1px solid #228cd1;
+		outline: #228cd1; */
+		outline: none;
+	}
+	.ListBox-disabled, .ListBoxA-disabled, .ListBoxB-disabled, .ListBoxC-disabled, .ListBoxD-disabled {
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3;
+		overflow-y: auto;
+		overflow-x: hidden;
+		background-color: #eff2f4;
+	}
+	.ListBox-disabled div div, .ListBoxA-disabled div div, .ListBoxB-disabled div div, .ListBoxC-disabled div div, .ListBoxD-disabled div div {
+		margin-bottom:1px;
+		cursor: not-allowed !important;
+		padding: 2px;
+	}
+	.ListBox-disabled:focus, .ListBoxA-disabled:focus, .ListBoxB-disabled:focus, .ListBoxC-disabled:focus, .ListBoxD-disabled:focus {
+		outline: none;
+	}
+	/* LISTBOX */
+	
+	/* PictureBox */
+	.PictureBox {
+		box-sizing: border-box;
+	}
+	.PictureBox > img {
+		width: 100%;
+		height: 100%;
+	}
+	.PictureBox:focus {
+		outline: none;
+	}
+	/* PictureBox */
+	
+	/* IFrame */
+	.IFrame {
+		border: 1px solid #a9a9a9;
+	}
+	.IFrame > iframe {
+		width: 100%;
+		height: 100%;
+		border: 0px none;
+	}
+	/* IFrame */
+	
+	/* Link */
+	.Link a {
+		box-sizing: border-box;
+		padding: 0px;
+		background-color: 'transparent';
+		color: #00effe;
+		font-weight: bold;
+		font-size: 12px;
+		text-decoration: none;
+		line-height: normal;
+		cursor: pointer;
+	}
+	/* Link */
+	
+	/* ProgressBar */
+	.ProgressBar {
+		padding: 0px;
+		margin: 0px;
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3;
+	}
+	.ProgressBar:focus {
+		outline: none;
+	}
+	.ProgressBar > div {
+		height: 100%;
+		background-color: #0000FF;
+	}
+	/* ProgressBar */
+	
+	/* Navigator */
+	.Navigator {
+		text-align: center;
+		clear: both;
+		box-sizing: border-box;
+	}
+	.Navigator div span {
+		cursor: pointer;
+	}
+	.Navigator .NavigatorLeft {
+		/* width: 25%; */
+		height: 100%;
+		text-align: left;
+		/* float: left; */
+		display: inline-block;
+	}
+	.Navigator .NavigatorLeft span {
+		/* padding: 0px;
+		padding-right: 5%; */
+		padding: 0 10px;
+		color: #228cd1;
+		font-family:"fontello";
+		cursor: pointer;
+		transition: background-color .3s;
+  		border: 1px solid #e4e4e4;
+  		border-radius: 5px;
+  		text-decoration: none;
+	}
+	.Navigator .NavigatorLeft span.transform {
+		-webkit-transform: rotateY(180deg); 
+		-moz-transform: rotateY(180deg); 
+		-ms-transform: rotateY(180deg); 
+		transform: rotateY(180deg);
+		display: inline-block;
+		/* padding: 0px;
+		padding-left: 5%; */
+	}
+	.Navigator .NavigatorRight {
+		/* width: 25%; */
+		height: 100%;
+		text-align: right;
+		/* float: right; */
+		display: inline-block;
+	}
+	.Navigator .NavigatorRight span {
+		/* padding: 0px;
+		padding-left: 5%; */
+		padding: 0 10px;
+		color: #228cd1;
+		font-family:"fontello";
+		cursor: pointer;
+		transition: background-color .3s;
+  		border: 1px solid #e4e4e4;
+  		border-radius: 5px;
+  		text-decoration: none;
+	}
+	.Navigator .NavigatorCenter {
+		/* width:50%; */
+		height: 100%;
+		/* float: left; */
+		display: inline-block;
+	}
+	.Navigator .NavigatorCenter span {
+		/* padding: 0px 2%; */
+		padding: 8px 16px;
+		/* font-family: 'Arial', 'Noto Sans KR', sans-serif; */
+		cursor:pointer;
+		transition: background-color .3s;
+		text-decoration: none;
+	}
+	.Navigator .NavigatorCenter span.bold {
+		font-weight: bold;
+	}
+	.Navigator .NavigatorCenter span.underline {
+		/* background-color: #4CAF50; */
+		background-color: #fff;
+		color: #228cd1;
+		border-radius: 5px;
+		cursor: default;
+		font-weight: bold;
+    	border: 1px solid #228cd1;
+	}	
+	.Navigator span:hover:not(.underline) {
+		background-color: #ddd;
+		border-radius: 5px;
+	}
+	.Navigator:focus {
+		outline: none;
+	}
+	/* Navigator */
+	
+	/* FrameBox */
+	/* FrameBox.Frame_NEW_ROUND : @frametype='5' */
+	div.Frame_NEW_LINE {
+		display: block; 
+		position: absolute;
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3;
+		overflow: hidden;
+		outline: none;
+	}
+	div.Frame_NEW_LINE > div:first-child {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding: 4px 7px 0px 7px; 
+	}
+	/* FrameBox.Frame_NEW_ROUND : @frametype='7' */
+	div.Frame_NEW_ROUND {
+		display: block; 
+		position: absolute;
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3;
+		border-radius : 7px;
+		overflow: hidden;
+		outline: none;
+	}
+	div.Frame_NEW_ROUND > div:first-child {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding: 4px 7px 0px 7px; 
+	}
+	/* FrameBox.Frame_NEW_FLOATINGLAYER : @frametype='98' */
+	div.Frame_NEW_FLOATINGLAYER { 
+		position: absolute; 
+		box-sizing: border-box; 
+		border: 1px solid #c3c3c3; 
+		border-radius:7px 7px;
+		overflow: hidden;
+		outline: none;
+	}
+	div.Frame_NEW_FLOATINGLAYER > div.layer {
+		position: absolute;
+		width: 100%; height: 100%; 
+		box-sizing: border-box;
+	}
+	div.Frame_NEW_FLOATINGLAYER > div.layer > div.title { 
+		margin-top: 7px; 
+		width: 100%; 
+		box-sizing: border-box;
+		cursor: move;
+	}
+	div.Frame_NEW_FLOATINGLAYER > div.layer > div.title > span { 
+		padding-left: 7px; padding-right: 7px; 
+		cursor: move;
+	}
+	div.Frame_NEW_FLOATINGLAYER > div.layer > div.title > div.closeBtn {
+		float: right; 
+		margin-right: 7px; 
+		width: 30px; 
+		box-sizing: border-box; 
+		border-radius:3px 3px;  
+		background: #e4541b; 
+		text-align: center;
+		cursor: pointer;
+	} 
+	div.Frame_NEW_FLOATINGLAYER > div.layer > div.title > div.closeBtn > span { 
+		font-family:"fontello";
+		color: #fff;
+		cursor: pointer;
+		font-weight: normal;
+		font-style: normal;
+		text-decoration: none;
+	}
+	div.Frame_NEW_FLOATINGLAYER > div.layer > div.content {
+		margin: 0;
+		padding: 7px 7px 0px 7px; 
+		width: 100%; 
+		box-sizing: border-box; 
+	}
+	div.Frame_NEW_FLOATINGLAYER > div.layer > div.content > div { 
+		width: 100%; height: 100%; 
+		border: 1px solid #c3c3c3; 
+		box-sizing: border-box; 
+	}
+	/* FrameBox.Frame_NEW_NONE : @frametype='99' */
+	div.Frame_NEW_NONE{
+		display: block; 
+		position: absolute;
+		box-sizing: border-box;
+		border: 0px none;
+		overflow: hidden;
+		outline: none;
+	}
+	div.Frame_NEW_NONE > div:first-child {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding: 4px 7px 0px 7px; 
+	}
+	/* FrameBox */
+	
+	/* UpDown Spin Button */
+	div.UpDown {
+		box-sizing: border-box;
+		border: 1px solid #c3c3c3;
+		font-family: fontello;
+	}
+	div.UpDown:focus {
+		outline: none;
+	}
+	div.UpDown > div.DirectArrow_Up
+	, div.UpDown > div.DirectArrow_Down {
+		position: relative;
+		width: 100%;
+		height: 50%;
+		box-sizing: border-box;
+		border: 0px none;
+		display: table;
+		cursor: pointer;
+	}
+	div.UpDown > div.DirectArrow_Up:hover
+	, div.UpDown > div.DirectArrow_Down:hover {
+		background-color: #228cd1;
+		color: #fff;
+	}
+	div.UpDown > div.DirectArrow_Up:active
+	, div.UpDown > div.DirectArrow_Down:active {
+		filter:alpha(opacity=50); 
+		opacity:0.5;
+	}
+	div.UpDown > div.DirectArrow_Down {
+		border-top: 1px solid #c3c3c3;
+	}
+	div.UpDown > div.DirectArrow_Up > div
+	, div.UpDown > div.DirectArrow_Down > div {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		line-height: 50%;
+	}
+	
+	div.UpDown > div.DirectArrow_Left
+	, div.UpDown > div.DirectArrow_Right {
+		position: relative;
+		width: 50%;
+		height: 100%;
+		box-sizing: border-box;
+		border-left: 0px none;
+		display: table;
+		cursor: pointer;
+		float: left;
+	}
+	div.UpDown > div.DirectArrow_Left:hover
+	, div.UpDown > div.DirectArrow_Right:hover {
+		background-color: #2f3a42;
+		color: #fff;
+	}
+	div.UpDown > div.DirectArrow_Right {
+		border-left: 1px solid #abbac3;
+	}
+	div.UpDown > div.DirectArrow_Left > div
+	, div.UpDown > div.DirectArrow_Right > div {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		line-height: 50%;
+	}
+	/* UpDown Spin Button */
+	
+	/* WEB EDITOR */
+	.WebEdit > div {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		clear: both;
+	}
+	/* WEB EDITOR */
+	
+	/* TABBOX */
+	.TabBox {
+		box-sizing: border-box;
+		border-top: 0px;
+		border-left: 1px solid #ddd;
+		empty-cells: show;
+		table-layout:fixed;
+		outline: none;
+	}
+	
+	.TabBox td.TabHeader {
+		width: 100%;
+	}
+	.TabBox td.TabHeader > div {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.TabTable {
+		table-layout: fixed;
+		border-spacing: 0px;
+		box-sizing: border-box;
+		display: table;
+	}
+	.TabGen {
+		box-sizing: border-box;
+		padding: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align: center;
+		white-space: nowrap;
+		color: #000;
+		background: #fff;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		/* border-left: 1px solid #ddd; */
+		cursor: pointer;
+		/* border-radius: 5px 5px 0px 0px; */
+	}
+	.TabSel {
+		background: #ABABAB;
+		color: #fff;
+		text-align: center;
+		font-weight: normal;
+		cursor: default;
+	}
+	.TabBlank {
+		box-sizing: border-box;
+		padding: 0;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		border-left: 1px solid #ddd;
+		/* border-right: 1px solid #ddd; */
+		color: #FFFFFF;
+		cursor: default;
+	}
+	
+	.TabSideBar {
+		position: absolute;
+		top: 0px;
+		left: calc(100% - 40px);
+		width: 40px;
+		box-sizing: border-box;
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+		border-left: 1px solid #ddd;
+		background-color: #fff;
+		text-align: center;
+		font-family: fontello;
+		cursor: pointer;
+	}
+	.TabSideBar > div {
+		float: left;
+		width: 50%;
+		height: 100%;
+		box-sizing: border-box;
+		border-right: 1px solid #ddd;
+	}
+	.TabSideBar > div > span {
+		width: calc(100%/2);
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.TabSideBar > div.LeftArrow > span {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+	
+	.TabBody {
+		width: 100%;
+	}
+	.TabBody > div{
+		/* position: relative; */
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 30px;
+	}
+	
+	.TabGen:hover {/* background:url("images/winnersoft/tab/btn_history_on.gif") no-repeat left top; */}	
+	/* TABBOX */
+	
+	/* GRIDFRAME */
+	.GridFrame > table {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width:100%;
+		box-sizing: border-box;
+		padding: 0px;
+		margin: 0px;
+		border-spacing: 0px;
+		border-top: 1px solid #000;
+		border-left: 1px solid #000;
+		border-bottom: 0px none;
+		border-right: 0px none;
+	}
+	.GridFrame > table > tbody > tr > td {
+		box-sizing: border-box;
+		padding: 0px;
+		margin: 0px;
+		border-top: 0px none;
+		border-left: 0px none;
+		border-bottom: 1px solid #000;
+		border-right: 1px solid #000;
+	}
+	.GridFrame > table > tbody > tr > td > div {
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	/* GRIDFRAME */
+	
+	/* WEB EDITOR */
+	.WebEdit > div {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		clear: both;
+	}
+	/* WEB EDITOR */
+	
+	/* TreeView */
+	.TreeView {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		border: 2px solid #ddd;
+		overflow: auto;
+		outline: none;
+		padding: 2px;
+		border-radius: 4px;
+	}
+	.TreeView SPAN {
+		white-space: nowrap;
+	}
+	.Node { 
+		cursor: pointer;
+	}
+	.NodeNot {
+		background-color: #fff;
+		color: #000;
+		text-decoration: none;
+	}
+	.NodeSel {
+		background-color: #228cd1;
+		color: #fff;
+		text-decoration: none;
+	}
+	.Node img {
+		border:none;
+	}
+	/* TreeView */
+	
+	/* FlashPlayer */
+	.FlashPlayer {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		border:1px solid #c3c3c3;
+	}
+	.FlashPlayer:focus {
+		outline: none;
+	}
+	/* FlashPlayer */
+	
+	/* Chart */
+	.Chart {
+		margin: 0px;
+		padding: 0px;
+		box-sizing: border-box;
+		border:1px solid #c3c3c3;
+		background-color: #fff;
+	}
+	.Chart:focus {
+		outline: none;
+	}
+	/* Chart */
+	
+	/* 달력 */
+	#calendarDiv TABLE {
+		border-left: 0px solid #C0C0C0;
+		border-top: 0px solid #C0C0C0;
+	}
+	.selectBoxTime, .selectBoxTimeOver {
+		line-height: 12px;
+		padding: 1px;
+		cursor: pointer;
+		padding-left: 2px;
+	}
+	.selectBox {
+		line-height: 12px;
+		padding: 1px;
+		cursor: pointer;
+		padding-left: 2px;
+		color: #FFFFFF;
+		position: relative;
+	}
+	.selectBoxOver {
+		line-height: 12px;
+		padding: 1px;
+		cursor: pointer;
+		padding-left: 2px;
+		/*border:1px solid #858BFF;*/
+		/*background-color: #ffffff;*/
+		/*color: #D60808;*/
+		color: #EDFF00;
+		position: relative;
+	}
+	.selectBoxTime {
+		border: 1px solid #C0C0C0;
+		color: #000000;
+		position: relative;
+	}
+	.selectBoxTimeOver {
+		border: 1px solid #C0C0C0;
+		color: #000000;
+		position: relative;
+	}
+	.todaysDate  {
+		height: 17px;
+		line-height: 17px;
+		padding: 1px;
+		background-color: #D3D7E8;
+		text-align: center;
+		position: absolute;
+		bottom: 0px;
+		width: 203px;
+		background-image: url(winnersoft/images/calendar/daily_block_background.gif);
+	}
+	.todaysDate div{
+		float: left;
+	}
+	.timeBar {
+		height: 17px;
+		line-height: 17px;
+		background-color: #ffffff;
+		width: 72px;
+		color: #FFF;
+		position: absolute;
+		right: 0px;
+	}
+	.monthYearPicker {
+		background-color: #ffffff;
+		border: 1px solid #C0C0C0;
+		position: absolute;
+		color: #317082;
+		left: 0px;
+		top: 15px;
+		z-index: 1000;
+		display: none;
+	}
+	.monthYearActive {
+		background-color: #ffffff;
+		color: #000000;
+	}
+	/* 요일 td */
+	#wn_weekdaynm {
+		padding: 3px;
+		margin: 0px;
+		font-size: 12px;
+		text-align: center;
+		cursor: pointer;
+		float: none;
+	}
+	/* 일자 td */
+	#wn_weekdaynum {
+		padding: 3px;
+		margin: 0px;
+		font-size: 12px;
+		text-align: center;
+		cursor: pointer;
+		float: none;
+		background-color: #EFEFEF;
+	}
+	#wn_weekdaydefalut {
+	    background-image: url(winnersoft/images/calendar/daily_block_background.gif);
+	}
+	/* 마우스 이동시 백그라운드 색살변경*/
+	/*#wn_weekdaynum:hover { background-image: url(/MiniStopHomePage/images/calendar_over.jpg); }*/
+	.topBar {
+		background-image: url(winnersoft/images/calendar/caledar_x-repeat_bg.gif);
+	}
+	
+	td.today {
+		color: red; font-weight: bold; font-size: 8pt; background-color: #fe4; text-align: right;
+	}
+	td.normal {
+		color: #088; font-weight: normal; font-size: 8pt; background-color: #eeddff; text-align: right;
+	}
+	td.holy {
+		color: #f00; font-weight: normal; font-size: 8pt; background-color: #faa; text-align: right;
+	}
+	td.sun {
+		color: #880000; font-weight: normal; font-size: 8pt; background-color: #ffddcc; text-align: right;
+	}
+	td.sat {
+		color: #088; font-weight: normal; font-size: 8pt; background-color: #f8ccdd; text-align: right;
+	}
+	td.week {
+		color: #008; font-weight: normal; font-size: 9pt; background-color: #ccc;
+	}
+	td.bottom {
+		color: #066; background-color:#eeeeee; font-size: 8pt; 
+	}
+	.BlackCell { 
+		cursor: pointer; font-size: 8pt; background-color: #000000; color : #FFFFFF; text-align: right; 
+	}
+	/* 달력 */
+	
+	/* ALERT */
+	#confirmPopDiv{
+		position:absolute;
+		background-color:#ffffff; 
+		border:3px solid #cdcdcd;
+		z-index:6000;
+		display:none;
+	}
+	#backgroundDiv{
+		position:absolute;
+		background-color:#B3B3B3; 
+		filter:alpha(opacity=50); 
+		opacity:0.5;
+		z-index:5999;
+	}
+	/* ALERT */
+	
+	/* AjaxBox loading  */
+	#ajaxBox{
+		position:absolute;
+		background-color:#B3B3B3; 
+		filter:alpha(opacity=1); 
+		opacity:0.01;
+	}
+
+	#ajaxBoxMent{
+		position:absolute;
+		text-align:center;
+		font-weight:bold;
+		padding:10px 0px 0px 0px;
+		color:#000000;   
+		font-size: 12px;
+	}
+	/* AjaxBox loading  */
+	
+	
+	
+	/* 사용안함 : Frame Shapes */
+	.FrameBoxB {
+		border:none;
+	}
+	.FrameBoxC {
+		border:none;
+	}
+	.FrameLeft {
+		padding:0px 0px 0px 0px;
+		background-image: url('../images/UpLeft.gif'); 
+		background-repeat: repeat-x; 
+		background-position: left top;
+		cursor: default;
+		border:none;
+	}
+	.FrameCenter {
+		padding:0px 0px 0px 0px;
+		background-image: url('../images/UpCenter.gif'); 
+		background-repeat: repeat-x; 
+		background-position: center top;
+		cursor: default;
+		border:none;
+	}
+	.FrameRight {
+		padding:0px 0px 0px 0px;
+		background-image: url('../images/UpRight.gif'); 
+		background-repeat: repeat-x; 
+		background-position: right top;
+		cursor: default;
+		border:none;
+	}
+	.FrameLeft1  {
+		padding:0px 0px 0px 0px;
+		background-image: url('../images/UpLeft1.gif'); 
+		background-repeat: repeat-x; 
+		background-position: left top;
+		cursor: default;
+		border:none;
+	}
+	.FrameCenter1 {
+		padding:0px 0px 0px 0px;
+		background-image: url('../images/UpCenter1.gif'); 
+		background-repeat: repeat-x; 
+		background-position: center top;
+		cursor: default;
+		border:none;
+	}
+	.FrameRight1 {
+		padding:0px 0px 0px 0px;
+		background-image: url('../images/UpRight1.gif'); 
+		background-repeat: repeat-x; 
+		background-position: right top;
+		cursor: default;
+		border:none;
+	}
+	.FrameBody { 
+		padding:0px 0px 0px 0px;
+		background-image: url('../images/leftLine.gif'); 
+		background-repeat: repeat-y; 
+		background-position: left top;
+		border-right: 1px solid #999999; 
+		border-bottom: 1px solid #999999; 
+	}
+	/* 사용안함 : Frame Shapes */
+	
+	
+/*	                                                        
+	.selectBoxTime,.selectBoxTimeOver {	                                
+		line-height:12px;                                                 
+		padding:1px;                                                      
+		cursor:pointer;                                                   
+		padding-left:2px;                                                 
+	}                                                                   
+	#calendarDiv TD {                                                    
+		padding:3px;                                                      
+		margin:0px;                                                       
+		font-size:12px;                                                   
+		text-align:right;                                                 
+		cursor:pointer;                                                   
+		float: none;                                                      
+		border-left: 0px solid #FFFFFF; border-right:0px solid #C0C0C0;   
+		border-top: 0px solid #FFFFFF; border-bottom:0px solid #C0C0C0; 	
+	}        
+	#calendarDiv TABLE {                                          
+		border-left:0px solid #C0C0C0;                                   
+		border-top:0px solid #C0C0C0;                                    
+	}       
+	.selectBox {                                                         
+		line-height:12px;                                                 
+		padding:1px;                                                      
+		cursor:pointer;                                                   
+		padding-left:2px;                                                 
+		border:1px solid #C0C0C0;		                                      
+		color: #000000;                                                   
+		position:relative;                                                
+	}                                                                   
+	.selectBoxOver {                                                     
+		line-height:12px;                                                 
+		padding:1px;                                                      
+		cursor:pointer;                                                   
+		padding-left:2px;                                                 
+		border:1px solid #C0C0C0;                                         
+		background-color: #ffffff;                                        
+		color: #D60808;                                                   
+		position:relative;                                                
+	}                                                                   
+	.selectBoxTime {                                                     
+		border:1px solid #C0C0C0;		                                      
+		color: #000000;                                                   
+		position:relative;                                                
+	}                                                                   
+	.selectBoxTimeOver {                                                 
+		border:1px solid #C0C0C0;	                                        
+		color: #000000;                                                   
+		position:relative;                                                
+	}                                                                   
+	.todaysDate  {                                                        
+		height:17px;                                                      
+		line-height:17px;                                                 
+		padding:2px;                                                      
+		background-color: #EFEFEF;                                        
+		text-align:center;                                                
+		position:absolute;                                                
+		bottom:0px;                                                       
+		width:201px;                                                      
+	}                 
+	.todaysDate div{                                                     
+		float:left;                                                       
+	}                                                                   
+	.timeBar {                                                           
+		height:17px;                                                      
+		line-height:17px;                                                 
+		background-color: #ffffff;                                        
+		width:72px;                                                       
+		color:#FFF;                                                       
+		position:absolute;                                                
+		right:0px;                                                        
+	}                                                                   
+	.monthYearPicker {                                                   
+		background-color: #ffffff;                                        
+		border:1px solid #C0C0C0;                                         
+		position:absolute;                                                
+		color: #317082;                                                   
+		left:0px;                                                         
+		top:15px;                                                         
+		z-index:1000;                                                     
+		display:none;                                                     
+	}                     
+	.monthYearActive {                                                   
+		background-color:#ffffff;                                         
+		color: #000000;                                                   
+	}
+*/
+	
+	
+	/*
+	 *	SHEET
+	 */
+	 
+	/* AUI DataSheet */
+	.AUIGrid_Align_left { text-align: left; }		/* Text Align : left */
+	.AUIGrid_Align_right { text-align: right; }		/* Text Align : right */
+	.AUIGrid_Align_center {	text-align: center; }	/* Text Align : center */
+	
+	.AUIDataSheet > div:first-child{
+	    overflow: hidden;
+	}
+	/* AUI DataSheet */
+	
+	
+	/* EasySheet */
+	div.EasyDataSheet {
+	    position: absolute;
+	    border: 1px solid #f4f4f4;
+	    box-sizing: border-box;
+	    border-top: 1px solid #a09ca0;
+	    border-bottom: 1px solid #a09ca0;
+	    color: #4d4d4d;
+	}
+	div.EasyDataSheet > div.SheetDiv {
+	    width: 100%; height: 100%;
+	}
+	
+	/* 시트 헤더 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader {
+	    position: absolute;
+	    width: 100%;
+	    height: 30px;
+	    box-sizing: border-box;
+	    background-color: #ededed;
+	    border-bottom: 1px solid #a09ca0;
+	    box-shadow: none;
+	    z-index: 1;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderDiv {
+	    height: 100%;
+	    background: #ededed;
+	    box-sizing: border-box;
+	    overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderDiv > table {
+		padding: 0;
+	    margin: 0;
+		border-spacing: 0;
+	    border-collapse: collapse;
+	    box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderDiv > table tr {
+		padding: 0;
+	    margin: 0;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	    height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderDiv > table tr > th {
+	    padding: 0;
+	    margin: 0;
+	    box-sizing: border-box;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	    border-right: 1px solid #cccccc;
+	    border-bottom: 1px solid #cccccc;
+	    position: relative;
+	    overflow: hidden;
+		font-weight: bold;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderDiv > table tr > th.RowHeader {
+		position: static;
+		border-bottom: 0px none;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderDiv > table tr > td.AddColHead {
+	    padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+	    border-collapse: collapse;
+	    border-right: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		text-align: center;
+		position: relative;
+	    overflow: hidden;
+		font-weight: bold;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderDiv > table tr > th > div {
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    line-height: 110%;
+		padding: 0;
+		margin: 0;
+		cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderDiv > table tr > td > div {
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+		padding: 0;
+		margin: auto;
+		cursor: default;
+	}
+	div.EasySheetSortDiv, div.EasySheetFilterDiv {
+		/* 시트 정렬 표시 DIV */
+		position: absolute;
+	    top: 0px;
+	    height: 100%;
+	    display: table;
+	    text-align: right;
+	    font-family: fontello;
+	}
+	div.EasySheetSortDiv > span, div.EasySheetFilterDiv > span {
+		/* 시트 정렬 표시 DIV > span */
+		display: table-cell;
+	    vertical-align: middle;
+	    padding-left: 5px;
+	    padding-right: 5px;
+	}
+	/* 시트 헤더 */
+	
+	/* 시트 본문 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent {
+	    position: absolute;
+	    margin-top: 30px;
+	    width: 100%;
+	    height: calc(100% - 30px);
+	    box-sizing: border-box;
+	    /* background-color: #fff; */
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div {
+	    background-color: #fff;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentDiv {
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentDiv > table {
+	    padding: 0;
+	    margin: 0;
+		border-spacing: 0;
+	    border-collapse: collapse;
+	    box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentDiv > table tr {
+		padding: 0;
+	    margin: 0;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	    height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentDiv > table tr > td {
+	    padding: 0;
+	    margin: 0;
+	    box-sizing: border-box;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	    border-right: 1px solid #cccccc;
+	    border-top: 1px solid transparent;
+	    border-bottom: 1px solid #cccccc;
+	    cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentDiv > table tr > td > div {
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0px 5px;
+	}
+	/* 시트 본문 */
+	
+	/* 시트 푸터 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter {
+		position: absolute;
+	    width: 100%;
+	    height: 30px;
+	    box-sizing: border-box;
+	    background-color: #fff;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterDiv {
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterDiv > table {
+	    padding: 0;
+	    margin: 0;
+		border-spacing: 0;
+	    border-collapse: collapse;
+	    box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterDiv > table tr {
+		padding: 0;
+	    margin: 0;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	    height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterDiv > table tr > td {
+	    padding: 0;
+	    margin: 0;
+		box-sizing: border-box;
+	    border-spacing: 0;
+	    border-collapse: collapse;
+	    border-right: 1px solid #cccccc;
+	    border-top: 1px solid #cccccc;
+		cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterDiv > table tr > td > div {
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0px 5px;
+	}
+	/* 시트 푸터 */
+	
+	/* 수직스크롤 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll {
+	    position: absolute;
+	    width: 15px;
+	    height: 100%;
+	    left: calc(100% - 15px);
+	    box-sizing: border-box;
+	    border-left: 1px solid #cccccc;
+	    background-color: #f7f7f7;
+	    /*display: none;*/
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollHeader {
+	    position: absolute;
+	    top: 0px;
+	    width: 100%;
+	    height: 30px;
+	    background: #ededed;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody {
+	    position: absolute;
+	    top: 30px;
+	    left: 0px;
+	    width: 14px;
+	    height: calc(100% - 30px);
+	    margin-top: -1px;
+	    border-top: 1px solid #a09ca0;
+	    border-bottom: 1px solid transparent;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollUpArrow {
+	    position: absolute;
+	    top: 0px;
+	    width: 100%;
+	    height: 15px;
+	    box-sizing: border-box;
+	    font-family: fontello;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollUpArrow > span {
+	    position: absolute;
+	    width: 100%;
+	    height: 15px;
+	    line-height: 15px;
+	    font-size: 14px;
+	    text-align: center;
+	    cursor: default;
+	    user-select: none;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollUpArrow > span:hover {
+	    background-color: #aaa;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollDownArrow {
+	    position: absolute;
+	    top: calc(100% - 15px);
+	    width: 100%;
+	    height: 15px;
+	    box-sizing: border-box;
+	    font-family: fontello;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollDownArrow > span {
+	    position: absolute;
+	    width: 100%;
+	    height: 15px;
+	    line-height: 15px;
+	    font-size: 14px;
+	    text-align: center;
+	    cursor: default;
+	    user-select: none;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollDownArrow > span:hover {
+	    background-color: #aaa;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollTrack {
+	    position: absolute;
+	    top: 15px;
+	    width: 100%;
+	    height: calc(100% - 30px);
+	    box-sizing: border-box;
+	    overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollTrack > div.SheetVScrollFace {
+	    position: absolute;
+	    top: 0px;
+	    width: 12px;
+	    height: 55px;
+	    border-radius: 5px;
+	    margin-left: 1px;
+	    margin-right: 1px;
+	    background-color: #bbb;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetVScroll > div.SheetVScrollBody > div.SheetVScrollTrack > div.SheetVScrollFace:hover {
+	    background-color: #999;
+	}
+	/* 수직스크롤 */
+	
+	/* 수평스크롤 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll {
+	    position: absolute;
+	    width: 100%;
+	    height: 15px;
+	    top: calc(100% - 15px);
+	    box-sizing: border-box;
+	    border-top: 1px solid #cccccc;
+	    background-color: #f7f7f7;
+	    /*display: none;*/
+	    z-index: 90;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollLeftArrow {
+	    position: absolute;
+	    left: 0px;
+	    width: 15px;
+	    height: 100%;
+	    box-sizing: border-box;
+	    font-family: fontello;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollLeftArrow > span {
+	    position: absolute;
+	    width: 15px;
+	    height: 100%;
+	    line-height: 15px;
+	    font-size: 14px;
+	    text-align: center;
+	    cursor: default;
+	    user-select: none;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollLeftArrow > span:hover {
+	    background-color: #999;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollRightArrow {
+	    position: absolute;
+	    top: 0px;
+	    left: calc(100% - 15px);
+	    width: 15px;
+	    height: 100%;
+	    box-sizing: border-box;
+	    font-family: fontello;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollRightArrow > span {
+	    position: absolute;
+	    width: 15px;
+	    height: 100%;
+	    line-height: 15px;
+	    font-size: 14px;
+	    text-align: center;
+	    cursor: default;
+	    user-select: none;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollRightArrow > span:hover {
+	    background-color: #999;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollTrack {
+	    position: absolute;
+	    top: 0px;
+	    left: 15px;
+	    width: calc(100% - 30px);
+	    height: 100%;
+	    box-sizing: border-box;
+	    overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollTrack > div.SheetHScrollFace {
+	    position: absolute;
+	    left: 0px;
+	    width: 0px;
+	    height: 12px;
+	    border-radius: 5px;
+	    margin-top: 1px;
+	    margin-bottom: 1px;
+	    background-color: #bbb;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHScroll > div.SheetHScrollTrack > div.SheetHScrollFace:hover {
+	    background-color: #999;
+	}
+	/* 수평스크롤 */
+	
+	/* 행/셀 스타일 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr > td.RowHeader {
+		/* 행번호 열 존재할 경우 */
+		text-align: center;
+		font-weight: bold;
+		color: #000;
+		/* 행번호 열 존재하지 않는 경우 */
+		/*display: none;*/
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr > td.RowHeader > div {
+		padding: 0px 2px !important;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.odd-num-row {
+	    background-color: #fff;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.even-num-row {
+	    background-color: #fafafa;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.none-background-row {
+	    background-color: transparent;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.mouse-over-row {
+	    background-color: rgb(123, 190, 234, 0.3) !important;
+	    color: #001a33 !important;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr > td.mouse-over-col {
+	    background-color: rgb(123, 190, 234, 0.3) !important;
+	    color: #001a33 !important;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.selected-row {
+	    background-color: rgb(123, 190, 234, 0.7) !important;
+	    color: #001a33 !important;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr > td.selected-col {
+	    background-color: rgb(123, 190, 234, 0.7) !important;
+		color: #001a33 !important;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.selected-row td,
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.mouse-over-row td {
+	    background: transparent !important;
+	}
+	
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.row-level-1-style {
+		background-color: rgb(217, 217, 217, 0.7);
+		color: #333333;
+		font-weight: 600;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.row-level-2-style {
+		background-color: rgb(191, 191, 191, 0.7);
+		color: #333333;
+		font-weight: 600;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.row-level-3-style {
+		background-color: rgb(166, 166, 166, 0.7);
+		color: #333333;
+		font-weight: 600;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.row-level-4-style {
+		background-color: rgb(140, 140, 140, 0.7);
+		color: #333333;
+		font-weight: 600;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div > table tr.row-level-5-style {
+		background-color: rgb(115, 115, 115, 0.7);
+		color: #333333;
+		font-weight: 600;
+	}
+	
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter table tr {
+		background-color: #fff;
+	}
+	/* 행 스타일 */
+	
+	/* 셀 스타일 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentDiv > table tr > td > div.SelectedCell,
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentLeftFixDiv > table tr > td > div.SelectedCell,
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentRightFixDiv > table tr > td > div.SelectedCell {
+		/*편집/수정중인 셀*/
+		padding: 0px;
+		box-sizing: border-box;
+		border: 2px solid #228cd1;
+		/*
+		position: absolute;
+		top: 0px;
+		*/
+	}
+	
+	/* 편집 텍스트박스 */
+	.SheetEidtTextDiv {
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+	.SheetEidtTextDiv > .SheetEidtTextbox {
+		width: 100%;
+		height: 100%;
+		padding: 0px;
+		padding-left: 5px;
+		padding-right: 5px;
+		box-sizing: border-box;
+		outline: none;
+		border: none;
+	}
+	
+	/* 편집 체크박스 */
+	.SheetEidtCheckDiv {
+		padding: 0px 5px !important;
+		user-select: none;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		outline: none;
+		display: none;
+		cursor: default;
+	}
+	
+	/* 편집 콤보박스 */
+	.SheetEidtComboDiv {
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+	.SheetEidtComboDiv > .SheetEidtCombobox {
+		width: 100%;
+		height: 100%;
+		outline: none;
+		border: none;
+		/*background-color: transparent;*/
+	}
+	
+	/* 편집 일자(날짜) */
+	.SheetEidtDateDiv {
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		display: none;
+	}
+	.SheetEidtDateDiv .SheetEidtDateInput {
+		width: calc(100% - 20px);
+		height: 100%;
+		padding: 0px;
+		padding-left: 5px;
+		padding-right: 5px;
+		box-sizing: border-box;
+		outline: none;
+		border: none;
+		float: left;
+	}
+	.SheetEidtDateDiv .SheetEidtDateCalender {
+		height: 100%;
+		box-sizing: border-box;
+		font-family: fontello;
+		font-size: 20px;
+		color: #000;
+		line-height: 26px;
+	    float: left;
+		
+		-webkit-user-select: none;
+	    -moz-user-select: none;
+	    -khtml-user-select: none;
+	    -ms-user-select: none;
+	}
+	
+	/* 버튼 셀 타입 */
+	.SheetCellButton {
+	    width: 100%;
+	    overflow: hidden;
+		text-overflow: ellipsis;
+		outline: none;
+		padding: 0;
+	    margin: 0;
+	    vertical-align: middle;
+		
+		background: #fff;
+		border: 1px solid #228cd1;
+		color: #228cd1;
+		border-radius: 4px;
+	}
+	.SheetCellButton:hover {
+		background: #228cd1;
+		color: #fff;
+		border: 1px solid #228cd1;
+	}
+	.SheetCellButton:active {
+		background: #1d75af;
+		color: #e9f4fb;
+		border: 1px solid #1d75af;
+	}
+	
+	/* 링크 셀 타입 */
+	.SheetCellLink {
+		color: #1a53ff;
+		text-decoration: underline;
+	}
+	.SheetCellLink:hover {
+		color: #990099;
+	}
+	
+	/* 이미지 셀 타입 */
+	.SheetCellImage {
+		height: 28px;
+	    width: auto;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		display: block;
+	}
+	/* 셀 스타일 */
+	
+	/* 시트 이미지 셀 확대 이미지 */
+	.SheetZoomImgeBox {
+		position: fixed;
+		z-index: 999;
+		top: 0px;
+		left: 709px;
+		padding: 6px;
+		box-sizing: border-box;
+		border: 5px solid #FFF;
+		border-radius: 8px;
+		background: rgba(0, 0, 0, 0.30);
+		display: none;
+	}
+	.SheetZoomImgeBox > img {
+		width:100%;
+		height: 100%;
+		box-sizing: border-box;
+		border-radius: 3px;
+	}
+	/* 시트 이미지 셀 확대 이미지 */
+	
+	/* 시트 메세지 박스 */
+	.SheetMsgBox {
+		position: absolute;
+		z-index: 9999;
+		top: 0px;
+		left: 0px;
+		padding: 3px 7px;
+		background: linear-gradient(#ffffff,#ff0000,#ff0000,#ffffff); /* background: #ff0000; */
+		border: 1px solid #f00;
+		color: #fff;
+		font-weight: bold;
+		display: none;
+	}
+	/* 시트 메세지 박스 */
+	
+	/* 시트 동작가능 패널 */
+	.SheetDisabledPanel {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		background: transparent;
+		z-index: 999;
+		display: none;
+	}
+	/* 시트 동작가능 패널 */
+	
+	/* 시트 리사이저 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader table tr > th > div.resizer:hover,
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader table tr > td > div.resizer:hover {
+		background: #595959;
+		cursor: ew-resize;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader table tr > th > div.resizer,
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader table tr > td > div.resizer {
+		position: absolute;
+		top: 0px;
+		left: calc(100% - 3px);
+		width: 3px;
+		height: 100%;
+		z-index: 79;
+	}
+	div.EasyDataSheet > div.SheetResizerLine {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 2px;
+		height: 100%;
+		box-sizing: border-box;
+		border: 1px dashed #595959;
+		display: none;
+		z-index: 89;
+	}
+	/* 시트 리사이저 */
+	
+	/* 좌측고정열 - 헤더 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderLeftFixDiv {
+	    position: absolute;
+	    left: 0px;
+	    top: 0px;
+	    height: 100%;
+	    background: #ededed;
+	    box-sizing: border-box;
+	    overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderLeftFixDiv > table {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderLeftFixDiv > table tr {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderLeftFixDiv > table tr > th {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+		border-collapse: collapse;
+		border-right: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		position: relative;
+		overflow: hidden;
+		font-weight: bold;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderLeftFixDiv > table tr > th.RowHeader {
+		position: static;
+		border-bottom: 0px none;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderLeftFixDiv > table tr > td.AddColHead {
+	    padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+	    border-collapse: collapse;
+	    border-right: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		text-align: center;
+		position: relative;
+	    overflow: hidden;
+		font-weight: bold;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderLeftFixDiv > table tr > th > div {
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+		padding: 0;
+		margin: 0;
+		cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderLeftFixDiv > table tr > td > div {
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+		padding: 0;
+		margin: auto;
+		cursor: default;
+	}
+	/* 좌측고정열 - 헤더 */
+	
+	/* 좌측고정열 - 본문 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentLeftFixDiv {
+	    position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentLeftFixDiv > table {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentLeftFixDiv > table tr {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentLeftFixDiv > table tr > td {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+		border-collapse: collapse;
+		border-right: 1px solid #cccccc;
+		border-top: 1px solid transparent;
+		border-bottom: 1px solid #cccccc;
+		cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentLeftFixDiv > table tr > td > div {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0px 5px;
+	}
+	/* 좌측고정열 - 본문 */
+	
+	/* 좌측고정열 - 푸터 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterLeftFixDiv {
+	    position: absolute;
+		left: 0px;
+	    top: 0px;
+		height: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterLeftFixDiv > table {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterLeftFixDiv > table tr {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterLeftFixDiv > table tr > td {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+		border-collapse: collapse;
+		border-right: 1px solid #cccccc;
+	    border-top: 1px solid #cccccc;
+	    /* border-bottom: 1px solid transparent; */
+		cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterLeftFixDiv > table tr > td > div {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0px 5px;
+	}
+	/* 좌측고정열 - 푸터 */
+	
+	/* 우측고정열 - 헤더 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderRightFixDiv {
+	    position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 100%;
+		background: #ededed;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderRightFixDiv > table {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderRightFixDiv > table tr {
+	    padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderRightFixDiv > table tr > th {
+	    padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+		border-collapse: collapse;
+		/* border-right: 1px solid #f4f4f4; */
+		border-left: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		position: relative;
+	    overflow: hidden;
+		font-weight: bold;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderRightFixDiv > table tr > th.lastHeaderCell {
+	    border-right: 1px solid #cccccc;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderRightFixDiv > table tr > td.AddColHead {
+	    padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+	    border-collapse: collapse;
+	    /* border-right: 1px solid #f4f4f4; */
+	    border-left: 1px solid #cccccc;
+		border-bottom: 1px solid #cccccc;
+		text-align: center;
+		position: relative;
+	    overflow: hidden;
+		font-weight: bold;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderRightFixDiv > table tr > th > div {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding: 0;
+		margin: 0;
+		cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetHeader > div.SheetHeaderRightFixDiv > table tr > td > div {
+	    overflow: hidden;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+		padding: 0;
+		margin: auto;
+		cursor: default;
+	}
+	/* 우측고정열 - 헤더 */
+	
+	/* 우측고정열 - 본문 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentRightFixDiv {
+	    position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentRightFixDiv > table {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentRightFixDiv > table tr {
+	    padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentRightFixDiv > table tr > td {
+	    padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+		border-collapse: collapse;
+	    border-left: 1px solid #cccccc;
+	    border-top: 1px solid transparent;
+	    border-bottom: 1px solid #cccccc;
+		cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentRightFixDiv > table tr > td.lastContentCell {
+	    border-right: 1px solid #cccccc;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetContent > div.SheetContentRightFixDiv > table tr > td > div {
+	    overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0px 5px;
+	}
+	/* 우측고정열 - 본문 */
+	
+	/* 우측고정열 - 푸터 */
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterRightFixDiv {
+	    position: absolute;
+		left: 0px;
+		top: 0px;
+		height: 100%;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterRightFixDiv > table {
+		padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		box-sizing: border-box;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterRightFixDiv > table tr {
+	    padding: 0;
+		margin: 0;
+		border-spacing: 0;
+		border-collapse: collapse;
+		height: 30px;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterRightFixDiv > table tr > td {
+	    padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		border-spacing: 0;
+		border-collapse: collapse;
+	    border-left: 1px solid #cccccc;
+	    border-top: 1px solid #cccccc;
+	    /* border-bottom: 1px solid transparent; */
+		cursor: default;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterRightFixDiv > table tr > td.lastContentCell {
+	    border-right: 1px solid #cccccc;
+	}
+	div.EasyDataSheet > div.SheetDiv > div.SheetFooter > div.SheetFooterRightFixDiv > table tr > td > div {
+	    overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0px 5px;
+	}
+	/* 우측고정열 - 푸터 */
+	
+	/*시트 달력*/
+	.EasySheetCalender {
+		position: absolute;
+		top: 50px; /*0px;*/
+		left: 50px; /*0px;*/
+		box-sizing: border-box;
+		background-color: #fff;
+		outline: none;
+		z-index: 9999;
+		display: none;
+		
+		width: 270px;
+	}
+	
+	/*시트 달력 : 일자*/
+	.EasySheetCalender > div.DateCalender {
+		/*
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 264px;
+		height: 288px;
+		*/
+		box-sizing: border-box;
+		border: 1px solid #acacac;
+		border-radius: 7px;
+		background-color: #fff;
+		box-shadow: 3px 2px 5px #a9a9a9;
+		display: block; /*block*/
+		
+		padding: 12px 0px;
+	}
+	.EasySheetCalender > div.DateCalender > table {
+		padding: 7px;
+		box-sizing: border-box;
+		border-spacing: 3px;
+		font-family: fontello;
+		
+		margin: 0 auto;
+	}
+	.EasySheetCalender > div.DateCalender > table tr > th,
+	.EasySheetCalender > div.DateCalender > table tr > td {
+		padding: 5px 9px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		text-align: center;
+		cursor: default;
+	}
+	.EasySheetCalender > div.DateCalender > table tr > th.prev_btn,
+	.EasySheetCalender > div.DateCalender > table tr > th.year_month,
+	.EasySheetCalender > div.DateCalender > table tr > th.next_btn {
+		padding: 12px 9px;
+	}
+	.EasySheetCalender > div.DateCalender > table tr > th.sunday,
+	.EasySheetCalender > div.DateCalender > table tr > td.sunday {
+		color: #ff0000;
+	}
+	.EasySheetCalender > div.DateCalender > table tr > th.saturday,
+	.EasySheetCalender > div.DateCalender > table tr > td.saturday {
+		color: #0000ff;
+	}
+	.EasySheetCalender > div.DateCalender > table tr > td.today {
+		font-weight: bold;
+		background-color: #b3d6ff;
+	}
+	.EasySheetCalender > div.DateCalender > table tr > th.time_btn,
+	.EasySheetCalender > div.DateCalender > table tr > th.today_btn {
+		padding: 3px 9px;
+	}
+	.EasySheetCalender > div.DateCalender > table tr > th.clickable, 
+	.EasySheetCalender > div.DateCalender > table tr > td.clickable {
+		-webkit-user-select: none;
+	    -moz-user-select: none;
+	    -khtml-user-select: none;
+	    -ms-user-select: none;
+	}
+	.EasySheetCalender > div.DateCalender > table tr > th.clickable:hover, 
+	.EasySheetCalender > div.DateCalender > table tr > td.clickable:hover {
+		background-color: #cce4ff !important;
+		cursor: pointer !important;
+	}
+	
+	/*시트 달력 : 년월*/
+	.EasySheetCalender > div.MonthCalender {
+		/*
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 264px;
+		height: 288px;
+		*/
+		box-sizing: border-box;
+		border: 1px solid #acacac;
+		border-radius: 7px;
+		background-color: #fff;
+		box-shadow: 3px 2px 5px #a9a9a9;
+		display: none; /*none*/
+		
+		padding: 12px 0px;
+	}
+	.EasySheetCalender > div.MonthCalender > table {
+		padding: 7px;
+		box-sizing: border-box;
+		border-spacing: 3px;
+		font-family: fontello;
+		
+		margin: 0 auto;
+	}
+	.EasySheetCalender > div.MonthCalender > table tr > th,
+	.EasySheetCalender > div.MonthCalender > table tr > td {
+		padding: 20px 17px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		text-align: center;
+		cursor: default;
+	}
+	.EasySheetCalender > div.MonthCalender > table tr > th.prev_btn,
+	.EasySheetCalender > div.MonthCalender > table tr > th.year_month,
+	.EasySheetCalender > div.MonthCalender > table tr > th.next_btn {
+		padding: 36px 22px;
+		padding-bottom: 24px;
+	}
+	.EasySheetCalender > div.MonthCalender > table tr > td.tomonth {
+		font-weight: bold;
+		background-color: #b3d6ff;
+	}
+	.EasySheetCalender > div.MonthCalender > table tr > th.clickable, 
+	.EasySheetCalender > div.MonthCalender > table tr > td.clickable {
+		-webkit-user-select: none;
+	    -moz-user-select: none;
+	    -khtml-user-select: none;
+	    -ms-user-select: none;
+	}
+	.EasySheetCalender > div.MonthCalender > table tr > th.clickable:hover, 
+	.EasySheetCalender > div.MonthCalender > table tr > td.clickable:hover {
+		background-color: #cce4ff !important;
+		cursor: pointer !important;
+	}
+	
+	/*시트 달력 : 년도*/
+	.EasySheetCalender > div.YearCalender {
+		/*
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 264px;
+		height: 288px;
+		*/
+		box-sizing: border-box;
+		border: 1px solid #acacac;
+		border-radius: 7px;
+		background-color: #fff;
+		box-shadow: 3px 2px 5px #a9a9a9;
+		display: none; /*none*/
+		
+		padding: 12px 0px;
+	}
+	.EasySheetCalender > div.YearCalender > table {
+		padding: 10px;
+		box-sizing: border-box;
+		border-spacing: 3px;
+		font-family: fontello;
+		
+		margin: 0 auto;
+	}
+	.EasySheetCalender > div.YearCalender > table tr > th,
+	.EasySheetCalender > div.YearCalender > table tr > td {
+		padding: 10px 9px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		text-align: center;
+		cursor: default;
+	}
+	.EasySheetCalender > div.YearCalender > table tr > th.prev_btn,
+	.EasySheetCalender > div.YearCalender > table tr > th.year_month,
+	.EasySheetCalender > div.YearCalender > table tr > th.next_btn {
+		padding: 24px 9px;
+	}
+	.EasySheetCalender > div.YearCalender > table tr > td.toyear {
+		font-weight: bold;
+		background-color: #b3d6ff;
+	}
+	.EasySheetCalender > div.YearCalender > table tr > th.clickable, 
+	.EasySheetCalender > div.YearCalender > table tr > td.clickable {
+		-webkit-user-select: none;
+	    -moz-user-select: none;
+	    -khtml-user-select: none;
+	    -ms-user-select: none;
+	}
+	.EasySheetCalender > div.YearCalender > table tr > th.clickable:hover, 
+	.EasySheetCalender > div.YearCalender > table tr > td.clickable:hover {
+		background-color: #cce4ff !important;
+		cursor: pointer !important;
+	}
+	
+	/*시트 달력 : 시간*/
+	.EasySheetCalender > div.TimeCalender {
+		/*
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 264px;
+		height: 288px;
+		*/
+		box-sizing: border-box;
+		border: 1px solid #acacac;
+		border-radius: 7px;
+		background-color: #fff;
+		box-shadow: 3px 2px 5px #a9a9a9;
+		display: none; /*none*/
+		
+		padding: 12px 0px;
+	}
+	.EasySheetCalender > div.TimeCalender > table {
+		padding: 11px;
+		box-sizing: border-box;
+		border-spacing: 3px;
+		font-family: fontello;
+		
+		margin: 0 auto;
+	}
+	.EasySheetCalender > div.TimeCalender > table tr > th {
+		padding: 17px 17px;
+		box-sizing: border-box;
+		border-radius: 5px;
+		text-align: center;
+		cursor: default;
+	}
+	.EasySheetCalender > div.TimeCalender > table tr > th.date_btn,
+	.EasySheetCalender > div.TimeCalender > table tr > th.apply_btn {
+		padding: 17px 17px;
+	}
+	.EasySheetCalender > div.TimeCalender > table tr > th.clickable, 
+	.EasySheetCalender > div.TimeCalender > table tr > td.clickable {
+		-webkit-user-select: none;
+	    -moz-user-select: none;
+	    -khtml-user-select: none;
+	    -ms-user-select: none;
+	}
+	.EasySheetCalender > div.TimeCalender > table tr > th.clickable:hover {
+		background-color: #cce4ff !important;
+		cursor: pointer !important;
+	}
+	/*시트 달력*/
+	
+	/*시트 컨텍스트 메뉴*/
+	div.EasySheetMenu {
+		position: fixed;
+		border: 1px solid #cecece;
+		background-color: #f7f7f7;
+		color: #333;
+		z-index: 101;
+		cursor: pointer;
+	}
+	div.EasySheetMenu > div.EasySheetMenuItem {
+		padding: 7px 15px 7px 15px;
+	}
+	div.EasySheetMenu > div.EasySheetMenuItem.Disabled {
+		color: #d3d3d3;
+		cursor: not-allowed;
+	}
+	div.EasySheetMenu > div.EasySheetMenuItem:hover {
+		background-color: #e2e2e2;
+	}
+	div.EasySheetMenu > div.EasySheetMenuSeparator {
+		border-top: 1px solid #ebebeb;
+		margin: 3px 5px 3px 5px;
+	}
+	/*시트 컨텍스트 메뉴*/
+	
+	/*시트 검색*/
+	div.EasySheetSearch {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 30px;
+		box-sizing: border-box;
+		border-bottom: 1px solid #dbdbdb;
+		/* border-radius: 5px; */
+		background-color: #fff;
+		z-index: 99;
+	}
+	div.EasySheetSearch > div.searchColum {
+		float: left;
+		display: table;
+		box-sizing: border-box;
+		border-right: 1px solid #dbdbdb;
+		height: 100%;
+	}
+	div.EasySheetSearch > div.searchColum > div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	div.EasySheetSearch > div.searchColum > div > select {
+		width: 100%;
+		border: 0px none;
+		padding: 0px 5px;
+		outline: none;
+		font-family: 'Noto Sans KR', sans-serif;
+		font-size: 11px;
+	}
+	div.EasySheetSearch > input.searchText {
+		padding: 0px 7px;
+		box-sizing: border-box;
+		border: 0px none;
+		height: 100%;
+		outline: none;
+		float: left;
+	}
+	div.EasySheetSearch > div.searchButtons {
+		margin-right: 5px;
+		box-sizing: border-box;
+		border-left: 1px solid #dbdbdb;
+		height: 100%;
+		float: left;
+	}
+	div.EasySheetSearch > div.searchButtons > div.button {
+		float: left;
+		display: table;
+		height: 100%;
+		margin-left: 5px;
+		padding: 0px 8px;
+		text-align: center;
+		border-radius: 50%;
+		cursor: pointer;
+		font-family: fontello;
+	}
+	div.EasySheetSearch > div.searchButtons > div.button:hover {
+		background-color: #e2e2e2;
+	}
+	div.EasySheetSearch > div.searchButtons > div.button > div {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	/*시트 검색*/
+	
+	/*시트 필터*/
+	div.EasySheetFilter {
+	    position: absolute;
+	    box-sizing: border-box;
+	    border: 1px solid #cecece;
+	    background: #f7f7f7;
+	    color: #333;
+	    z-index: 99;
+	    cursor: default;
+	    overflow-x: hidden;
+		overflow-Y: auto;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem {
+		padding: 7px 15px 7px 15px;
+		margin: 0px 5px;
+	}
+	div.EasySheetFilter > div.EasySheetMenuSeparator {
+		border-top: 1px solid #cecece;
+		margin: 0px 5px;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Title > span {
+		font-weight: bold;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Select > div.FilterItemList {
+		border: 1px solid #ebebeb;
+		box-sizing: border-box;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Select > div.FilterItemList > div.FilterItem {
+		padding: 5px 5px;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Select > div.FilterItemList > div.FilterItem > div.ItemCheck {
+		float: left;
+		font-family: fontello;
+		padding-right: 5px;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Select > div.FilterItemList > div.FilterItem > div.ItemName {
+		text-overflow: ellipsis;
+		overflow-x: hidden;
+		overflow-Y: hidden;
+		line-height: 100%;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Buttons > div.Button {
+		float: right;
+		padding: 0px 7px 7px 7px;
+		font-family: fontello;
+		font-size: 14px;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Buttons > div.Button > span {
+		padding: 3px;
+		border-radius: 50%;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Initialize > span.Initialize
+	, div.EasySheetFilter > div.EasySheetMenuItem.Select > div.FilterItemList > div.FilterItem
+	, div.EasySheetFilter > div.EasySheetMenuItem.Buttons > div.Button > span {
+		cursor: pointer;
+	}
+	div.EasySheetFilter > div.EasySheetMenuItem.Initialize:hover
+	, div.EasySheetFilter > div.EasySheetMenuItem.Select > div.FilterItemList > div.FilterItem:hover
+	, div.EasySheetFilter > div.EasySheetMenuItem.Buttons > div.Button > span:hover {
+		background-color: #e2e2e2;
+	}
+	/*시트 필터*/
+	/* EasySheet */
+	
+	
+	/* Table Action */
+	.SelectedStyle {
+		color: blue !important;
+		text-decoration: none !important;
+		background-color: #fafad2 !important;
+		cursor: pointer !important;
+	}
+	.SelectedStyle2 {
+		background-color: #CCFFFF;
+		cursor: pointer;
+	}
+	TD.Focused {
+		background-color: #CCFFFF;
+	}
+	input.shtText {
+		position: absolute;
+	}
+	select.shtCombo {
+		position: absolute;
+	}
+	
+	.DataSheet {
+		font: 1em arial;
+		color: #000000;
+	}
+	div.DataSheet {
+		border: 1px solid #ccc;
+	}
+	.DataSheet table  {
+		border-collapse: collapse;
+		margin: 0 0 10px 0;
+		empty-cells: show; 
+		table-layout: fixed;
+		background-color: #FFFFFF;
+	}    
+	.DataSheet table td.AddColHead,
+	.DataSheet table th.AddColHead {
+		text-align: center;
+		cursor: pointer;
+		overflow-x: hidden;
+		white-space: nowrap;
+		padding: 0 0 0 0;
+		background-color: #EDF6FD;
+		color: #296283;
+	}
+	.DataSheet {
+		border-bottom: 1px solid #a8b0bc;
+		border-top: 1px solid #a8b0bc;
+		border-left: 1px solid #a8b0bc;
+		border-right: 1px solid #a8b0bc;
+	}
+	.DataSheet .DataDiv > table > tbody > tr > td {
+		border-right: 1px solid #CCC;
+		border-left: 1px solid #CCC;
+		border-bottom: 1px solid #CCC;
+		overflow: hidden;
+	}
+	.DataSheet table td.ColHead,
+	.DataSheet table th.ColHead {
+		text-align: center;
+		cursor: pointer;
+		overflow-x: hidden; 
+		white-space: nowrap;
+		padding: 0 0 0 0;
+		background-color: #EDF6FD;
+		color: #296283;
+	}
+	.DataSheet table td.BOTTOMCELL,
+	.DataSheet table th.BOTTOMCELL { 
+		text-align: center;
+		cursor: pointer;
+		overflow-x: hidden; 
+		white-space: normal; 
+		padding: 0 0 0 0; 
+		background-color: #fafad2;
+	}
+	.DataSheet table td.RowHead { 
+		text-align: center; 
+		vertical-align: middle; 
+		cursor: pointer;
+		overflow-x: hidden; 
+		white-space: nowrap; 
+		background-color: #EDF6FD;
+		color: #296283;
+	}
+	.DataSheet table td.PickRowHead, #sheet_1 table th.PickRowHead {
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		overflow-x: hidden;
+		white-space: nowrap;
+		background-color: #fef6a3;
+		color: #296283;
+	}
+	.DataSheet table td.PickColHead, #sheet_1 table th.PickColHead {
+		text-align: center;
+		cursor: pointer;
+		overflow-x: hidden;
+		white-space: nowrap;
+		padding: 0 0 0 0;
+		background-color: #ffd964;
+		color: #296283;
+	}
+	.DataSheet .MoveStyle {
+		color: #891c1c !important;
+		text-decoration: bold !important;
+		background-color: #fef6a3 !important;
+		cursor: pointer !important;
+	}
+	.DataSheet .MoveColumn {
+		text-align: center;
+		cursor: pointer;
+		padding: 0 0 0 0;
+		overflow-x: hidden;
+		white-space: nowrap;
+		background-color: #EDF6FD;
+		color: #296283;
+	}
+	.DataSheet .MovePickCell {
+		text-align: center;
+		cursor: pointer;
+		padding: 0 0 0 0;
+		overflow-x: hidden;
+		white-space: nowrap;
+		opacity: 0.5;
+		vertical-align: middle;
+		background: #e4ecd4;
+	}
+	.DataSheet .MovingColumnDiv {
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;;
+		padding: 0 0 0 0;
+		overflow: hidden;
+		white-space: nowrap;
+		background-color: #ffd964;
+		opacity: 0.8;
+		position: absolute;
+	}
+	
+	.ScrollDiv {
+		overflow-y:scroll;
+		overflow-x:scroll;
+	}
+	
+	/* Cross Action */
+	.CrossSheet {
+		border: 1px solid #808080;
+		outline: none;
+	}
+	.CrossSheet table td {
+		border-right: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		padding-right: 5px;
+		padding-left: 5px;
+		box-sizing: border-box;
+		overflow: hidden;
+    	white-space: nowrap;
+	}
+	.HeadLevel1 {
+		background-color: #FFECEC;
+		text-align: center;
+		vertical-align: middle;
+		border-left: 1px solid #FFECFF;
+		border-right: 1px solid #003973;
+		border-top: 1px solid #FFECFF;
+		border-bottom: 1px solid #000000;
+		padding: 0 !important;
+	}
+	.HeadLevel2 {
+		background-color: #DDFFDD;
+		text-align: center;
+		vertical-align: middle;
+		border-left: 1px solid #DDFFFF;
+		border-right: 1px solid #003973;
+		border-top: 1px solid #DDFFFF;
+		border-bottom: 1px solid #000000;
+		padding: 0 !important;
+	}
+	.HeadLevel3 {
+		background-color: #D0FFFF;
+		text-align: center;
+		vertical-align: middle;
+		border-left: 1px solid #D0FFFF;
+		border-right: 1px solid #003973;
+		border-top: 1px solid #D0FFFF;
+		border-bottom: 1px solid #000000;
+		padding: 0 !important;
+	}
+	.HeadLevel4 {
+		background-color: #FFD9FF;
+		text-align: center;
+		vertical-align: middle;
+		border-left: 1px solid #FFD9FF;
+		border-right: 1px solid #003973;
+		border-top: 1px solid #FFD9FF;
+		border-bottom: 1px solid #000000;
+		padding: 0 !important;
+	}
+	.HeadLevel5 {
+		background-color: #CACAFF;
+		text-align: center;
+		vertical-align: middle;
+		border-left: 1px solid #D0E8FF;
+		border-right: 1px solid #003973;
+		border-top: 1px solid #D0E8FF;
+		border-bottom: 1px solid #000000;
+		padding: 0 !important;
+	}
+	.CSumLineR1 {
+		border-right: 1px solid #808000;
+	}
+	.CSumLineR2 {
+		border-right: 1px solid #400080;
+	}
+	.CSumLineR3 {
+		border-right: 1px solid #8000FF;
+	}
+	.CSumLineR4 {
+		border-right: 1px solid #0000FF;
+	}
+	.CSumLineR5 {
+		border-right: 1px solid #FF0000;
+	}
+	.CSumLineC1 {
+		border-bottom: 1px solid #808000;
+	}
+	.CSumLineC2 {
+		border-bottom: 1px solid #400080;
+	}
+	.CSumLineC3 {
+		border-bottom: 1px solid #8000FF;
+	}
+	.CSumLineC4 {
+		border-bottom: 1px solid #0000FF;
+	}
+	.CSumLineC5 {
+		border-bottom: 1px solid #FF0000;
+	}
+	.CSumBack1 {
+		background-color: #FBFFF7;
+	}
+	.CSumBack2 {
+		background-color: #DFFFFF;
+	}
+	.CSumBack3 {
+		background-color: #F8F0FF;
+	}
+	.CSumBack4 {
+		background-color: #DFEFFF;
+	}
+	.CSumBack5 {
+		background-color: #FFF2E6;
+	}
+	
+	/*
+	 *	SHEET
+	 */

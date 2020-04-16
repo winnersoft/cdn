@@ -17293,6 +17293,11 @@ var modalArguments = ";";
  */
 //postMessage 방식의 리턴값 받기
 function postMessageController(e) {
+	// jsfiddle 호출시 스킵 
+	if (window.location.hostname.indexOf("fiddle") >= 0){
+		return;
+	}
+
 	if (e.data == "loaded"){				// 차일드에서 받는 부모폼폼코딩
 		//window.setTimeout("postArgument();", 1);
 		postArgument();
